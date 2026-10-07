@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Two-Channel Headphone Amplifier | Logan Ward</title>
+
+    <!-- ../ means go back one folder to find style.css -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="container nav-container">
+
+        <div class="logo">LOGAN WARD</div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#senior-design">Senior Design</a></li>
+            <li><a href="../index.html#resume">Resume</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- Project Header -->
+
+<section class="project-hero">
+
+    <div class="container">
+
+        <a href="../index.html#projects" class="back-link">
+            ← Back to Projects
+        </a>
+
+        <div class="project-tag">Analog Circuit Design</div>
+
+        <h1>Two-Channel Headphone Amplifier</h1>
+
+        <p class="project-subtitle">
+            EE 2300 – Electronic Circuits and Systems
+        </p>
+
+        <p class="project-tools">
+            Operational Amplifiers • Active Filters • Circuit Analysis • Simulation
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Project Content -->
+
+<section class="project-page">
+
+    <div class="container project-content">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            The goal of this project was to design, simulate, build, and test
+            a two-channel headphone amplifier. The amplifier required separate
+            left and right audio channels with independent volume control.
+            Each channel used an active bandpass filter to provide the required
+            amplification while limiting the frequency response to the
+            specified range.
+        </p>
+
+
+        <h2>Design Requirements</h2>
+
+        <ul>
+            <li>Two independent audio channels</li>
+            <li>Independent potentiometer volume control for each channel</li>
+            <li>Passband gain of 20 V/V</li>
+            <li>Lower corner frequency of 100 Hz</li>
+            <li>Upper corner frequency of 15 kHz</li>
+            <li>Operational-amplifier-based bandpass filtering</li>
+        </ul>
+
+
+        <h2>My Role</h2>
+
+        <p>
+            I worked with my lab partner to design, construct, and test the
+            amplifier. My responsibilities included analyzing the circuit
+            requirements, determining component values for the bandpass
+            filters, constructing the circuit, evaluating simulation and
+            experimental results, and troubleshooting the design during
+            development.
+        </p>
+
+
+        <h2>Design & Implementation</h2>
+
+        <p>
+            We determined that an active bandpass filter was appropriate for
+            each audio channel because the amplifier needed both a specified
+            gain and defined lower and upper corner frequencies. The center
+            frequency was determined from the required frequency range, and
+            resistor and capacitor values were selected based on the desired
+            gain and cutoff frequencies.
+        </p>
+
+        <p>
+            The final circuit used an LMC660 operational amplifier. Two
+            amplifier channels were implemented, with one channel controlling
+            the left audio signal and the other controlling the right.
+            Potentiometers configured with voltage dividers provided
+            independent volume adjustment for each channel.
+        </p>
+
+
+        <h2>Results</h2>
+
+        <p>
+            After constructing and testing the amplifier, the circuit
+            successfully met the project requirements. The measured frequency
+            response and gain were close to the target design values.
+        </p>
+
+        <div class="results-table">
+
+            <table>
+
+                <tr>
+                    <th>Parameter</th>
+                    <th>Target</th>
+                    <th>Measured</th>
+                </tr>
+
+                <tr>
+                    <td>Lower Corner Frequency</td>
+                    <td>100 Hz</td>
+                    <td>99.6 Hz</td>
+                </tr>
+
+                <tr>
+                    <td>Upper Corner Frequency</td>
+                    <td>15 kHz</td>
+                    <td>15.6 kHz</td>
+                </tr>
+
+                <tr>
+                    <td>Passband Gain</td>
+                    <td>20 V/V</td>
+                    <td>20.26 V/V</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <p>
+            The completed circuit was also tested using a speaker, allowing
+            us to verify that the amplifier operated successfully with an
+            actual audio output.
+        </p>
+
+
+        <h2>Skills & Knowledge Gained</h2>
+
+        <p>
+            This project strengthened my understanding of operational
+            amplifiers, active filters, frequency response, gain, and
+            practical circuit construction. It also gave me experience
+            translating theoretical circuit requirements into component
+            values and then comparing simulated and measured performance.
+        </p>
+
+        <p>
+            The project also improved my troubleshooting and teamwork skills.
+            Designing a circuit that worked both theoretically and physically
+            required us to diagnose problems, reconsider design decisions,
+            and verify our results through measurement.
+        </p>
+
+
+        <h2>Resources Used</h2>
+
+        <ul>
+            <li>LMC660 operational amplifier</li>
+            <li>Resistors and capacitors for active bandpass filtering</li>
+            <li>Potentiometers for independent channel volume control</li>
+            <li>Breadboard and laboratory power supplies</li>
+            <li>Circuit simulation software</li>
+            <li>Course material and external active-filter references</li>
+        </ul>
+
+
+        <h2>Supporting Documents</h2>
+
+        <p>
+            The original design report contains the complete circuit
+            schematic, design calculations, simulation results, physical
+            circuit implementation, and experimental results.
+        </p>
+
+        <!-- We'll add the report button here later -->
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Logan Ward</p>
+</footer>
+
+</body>
+
+</html>
