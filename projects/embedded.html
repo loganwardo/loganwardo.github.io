@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HarvestBot | Logan Ward</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="container nav-container">
+
+        <div class="logo">LOGAN WARD</div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#senior-design">Senior Design</a></li>
+            <li><a href="../index.html#resume">Resume</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- Project Header -->
+
+<section class="project-hero">
+
+    <div class="container">
+
+        <a href="../index.html#projects" class="back-link">
+            ← Back to Projects
+        </a>
+
+        <div class="project-tag">Embedded Systems</div>
+
+        <h1>HarvestBot Autonomous Sensing Robot</h1>
+
+        <p class="project-subtitle">
+            Embedded Systems Final Project
+        </p>
+
+        <p class="project-tools">
+            C • TM4C123 • UART • ADC • Ultrasonic Sensing • Servo Control
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Project Content -->
+
+<section class="project-page">
+
+    <div class="container project-content">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            HarvestBot was an embedded robotic system designed to navigate
+            an environment while collecting sensor information about nearby
+            objects. The project integrated multiple hardware peripherals
+            with embedded C software to create a controllable sensing and
+            navigation platform.
+        </p>
+
+        <p>
+            The robot communicated with an external graphical interface over
+            UART, allowing a user to control movement, perform environmental
+            scans, and receive sensor measurements from the robot.
+        </p>
+
+
+        <h2>System Features</h2>
+
+        <ul>
+            <li>180-degree environmental scanning</li>
+            <li>Infrared object detection using ADC measurements</li>
+            <li>Ultrasonic distance measurement using a PING sensor</li>
+            <li>Servo-controlled sensor positioning</li>
+            <li>UART communication with an external GUI</li>
+            <li>Forward, reverse, and rotational robot movement</li>
+            <li>Fine-positioning movement controls</li>
+            <li>LCD system-status and battery information</li>
+        </ul>
+
+
+        <h2>My Role</h2>
+
+        <p>
+            I contributed to the embedded software used to integrate the
+            robot's sensors, movement system, communication interface, and
+            user controls. The project required coordinating several
+            microcontroller peripherals while maintaining reliable
+            communication between the robot and the external interface.
+        </p>
+
+        <p>
+            My work involved integrating and debugging C modules for sensor
+            acquisition, servo positioning, UART communication, movement,
+            and system-level operation.
+        </p>
+
+
+        <h2>Environmental Scanning</h2>
+
+        <p>
+            One of the primary features of the system was a 180-degree
+            environmental scan. The servo moved the sensing system from
+            0 to 180 degrees in two-degree increments.
+        </p>
+
+        <p>
+            At each position, the microcontroller collected an infrared ADC
+            measurement and an ultrasonic distance measurement. The angle,
+            infrared measurement, and distance were then transmitted over
+            UART to the graphical interface.
+        </p>
+
+        <p>
+            Combining the two sensors allowed the system to use infrared
+            measurements for detecting object boundaries while using the
+            ultrasonic sensor to estimate object distance.
+        </p>
+
+
+        <h2>Communication & Control</h2>
+
+        <p>
+            The robot used UART communication to receive user commands and
+            transmit sensor information. A command-based control system
+            allowed the external interface to request scans and control
+            robot movement.
+        </p>
+
+        <p>
+            Commands were implemented for forward movement, fine forward
+            adjustment, reverse movement, 90-degree turns, manually specified
+            turns, environmental scanning, and additional robot actions.
+        </p>
+
+
+        <h2>Hardware & Software Integration</h2>
+
+        <p>
+            The project required several hardware and software systems to
+            operate together. At startup, the software initialized the timer,
+            LCD, UART interface, ADC, servo, ultrasonic sensor, and robot
+            Open Interface.
+        </p>
+
+        <p>
+            The main control loop continuously monitored the UART interface
+            for commands and then executed the appropriate movement, sensing,
+            or user-feedback operation. Status information was also displayed
+            on the onboard LCD.
+        </p>
+
+
+        <h2>Skills & Knowledge Gained</h2>
+
+        <p>
+            This project strengthened my understanding of embedded-system
+            integration and microcontroller programming. I gained experience
+            combining multiple peripherals within a single system, including
+            ADC measurements, UART communication, servo control, ultrasonic
+            sensing, and robotic movement.
+        </p>
+
+        <p>
+            The project also improved my ability to debug interactions
+            between hardware and software. Coordinating sensor timing,
+            communication, movement, and user commands required systematic
+            troubleshooting and careful integration of independently
+            developed software modules.
+        </p>
+
+
+        <h2>Resources Used</h2>
+
+        <ul>
+            <li>TM4C123 microcontroller</li>
+            <li>Embedded C</li>
+            <li>Code Composer Studio</li>
+            <li>UART communication</li>
+            <li>ADC / infrared sensor</li>
+            <li>PING ultrasonic sensor</li>
+            <li>Servo motor</li>
+            <li>LCD display</li>
+            <li>Robot Open Interface API</li>
+        </ul>
+
+
+        <h2>Supporting Documents</h2>
+
+        <p>
+            Supporting materials include the embedded C source code used
+            for sensor acquisition, robot control, UART communication, and
+            system integration.
+        </p>
+
+        <!-- Source-code link will be added later -->
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Logan Ward</p>
+</footer>
+
+</body>
+
+</html>
