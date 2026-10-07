@@ -4,290 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>PTAT Temperature Sensor | Logan Ward</title>
-
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-<!-- Navigation -->
+    <header>
+        <div class="container">
+            <h1>PTAT Temperature Sensor</h1>
+            <p>EE 3300 – Integrated Electronics</p>
+        </div>
+    </header>
 
-<nav>
-    <div class="container nav-container">
+    <nav>
+        <div class="container">
+            <a href="../index.html">Home</a>
+            <a href="../experience.html">Experience</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../senior-design.html">Senior Design</a>
+            <a href="../reflections.html">Reflections</a>
+            <a href="../resume.pdf" target="_blank">Resume</a>
+        </div>
+    </nav>
 
-        <div class="logo">LOGAN WARD</div>
+    <main>
+        <div class="container">
 
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#experience">Experience</a></li>
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#senior-design">Senior Design</a></li>
-            <li><a href="../index.html#resume">Resume</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
+            <section>
+                <h2>Project Description</h2>
 
-    </div>
-</nav>
+                <p>
+                    For this project, my partner and I designed a
+                    proportional-to-absolute-temperature (PTAT) temperature
+                    sensor. The goal was to create an analog circuit with a
+                    linear output voltage between 0 V and 1 V over a
+                    temperature range of 0°C to 50°C.
+                </p>
 
-
-<!-- Project Header -->
-
-<section class="project-hero">
-
-    <div class="container">
-
-        <a href="../index.html#projects" class="back-link">
-            ← Back to Projects
-        </a>
-
-        <div class="project-tag">Analog Integrated Circuit Design</div>
-
-        <h1>PTAT Temperature Sensor</h1>
-
-        <p class="project-subtitle">
-            EE 3300 – Integrated Electronics
-        </p>
-
-        <p class="project-tools">
-            Cadence Virtuoso • CMOS • Analog IC Design • Layout • DRC • LVS
-        </p>
-
-    </div>
-
-</section>
+                <p>
+                    The project included both the circuit design and physical
+                    layout of the temperature sensor.
+                </p>
+            </section>
 
 
-<!-- Project Content -->
+            <section>
+                <h2>My Role</h2>
 
-<section class="project-page">
-
-    <div class="container project-content">
-
-        <h2>Project Overview</h2>
-
-        <p>
-            The goal of this project was to design and implement an analog
-            temperature sensor with an output voltage proportional to absolute
-            temperature (PTAT). The sensor was designed to operate from
-            0°C to 50°C and produce a linear output ranging from 0 V at
-            0°C to 1 V at 50°C.
-        </p>
-
-        <p>
-            The project included transistor-level circuit design, simulation,
-            component sizing, physical IC layout, and design verification
-            using Cadence Virtuoso.
-        </p>
+                <p>
+                    I worked with my project partner on the design,
+                    simulation, transistor sizing, circuit layout, and
+                    verification of the temperature sensor. This required
+                    combining concepts from throughout the course into one
+                    complete integrated circuit design.
+                </p>
+            </section>
 
 
-        <h2>Design Requirements</h2>
+            <section>
+                <h2>Design</h2>
 
-        <ul>
-            <li>Temperature range of 0°C to 50°C</li>
-            <li>Output of 0 V at 0°C</li>
-            <li>Output of 1 V at 50°C</li>
-            <li>Linear PTAT output response</li>
-            <li>Use of diodes as temperature-sensitive devices</li>
-            <li>Implementation of an operational amplifier</li>
-            <li>Physical IC layout and design verification</li>
-        </ul>
+                <p>
+                    The first stage of the circuit used two diodes, a current
+                    mirror, and a resistor to generate a voltage that changed
+                    with temperature. The diode area ratio was selected to
+                    create the required PTAT behavior.
+                </p>
 
+                <p>
+                    A differential amplifier and resistor network were then
+                    used to amplify and shift the signal so that the final
+                    output ranged from approximately 0 V at 0°C to 1 V at
+                    50°C.
+                </p>
 
-        <h2>My Role</h2>
-
-        <p>
-            I worked with a project partner to develop the complete
-            temperature-sensor circuit. My work included circuit analysis,
-            device sizing, simulation, operational-amplifier design,
-            resistor-network tuning, physical layout, and troubleshooting
-            DRC and LVS verification issues.
-        </p>
-
-        <p>
-            The project required us to move from an initial circuit concept
-            through simulation and finally into a physical IC layout while
-            maintaining the required temperature-to-voltage relationship.
-        </p>
+                <p>
+                    The circuit was designed and simulated in Cadence
+                    Virtuoso before the physical layout was completed.
+                </p>
+            </section>
 
 
-        <h2>Design & Implementation</h2>
+            <section>
+                <h2>Results</h2>
 
-        <h3>Stage 1 – PTAT Generation</h3>
+                <table>
+                    <tr>
+                        <th>Measurement</th>
+                        <th>Target</th>
+                        <th>Result</th>
+                    </tr>
 
-        <p>
-            The first stage generated the temperature-dependent voltage.
-            Two diodes with different device areas were biased using a
-            current mirror. Maintaining equal current through the devices
-            allowed the difference in diode voltage to depend primarily
-            on their area ratio and temperature.
-        </p>
+                    <tr>
+                        <td>Temperature Range</td>
+                        <td>0–50°C</td>
+                        <td>0–50°C</td>
+                    </tr>
 
-        <p>
-            Different diode areas created different current densities,
-            producing a voltage difference that varied proportionally with
-            absolute temperature. A diode-area ratio of approximately 2.72
-            was selected for the design.
-        </p>
+                    <tr>
+                        <td>Output Range</td>
+                        <td>0–1 V</td>
+                        <td>Approximately 0–1 V</td>
+                    </tr>
 
+                    <tr>
+                        <td>Ideal Slope</td>
+                        <td>0.020 V/°C</td>
+                        <td>0.0199947 V/°C</td>
+                    </tr>
+                </table>
 
-        <h3>Stage 2 – Differential Amplification</h3>
-
-        <p>
-            The PTAT voltage generated by the first stage was very small,
-            so a differential operational amplifier was designed to measure
-            and amplify the difference between the two input voltages.
-        </p>
-
-        <p>
-            The operational amplifier was implemented at the transistor
-            level using eight MOSFETs. Device dimensions were selected to
-            maintain appropriate bias currents and transistor operating
-            regions while providing sufficient gain and stability.
-        </p>
-
-
-        <h3>Output Scaling</h3>
-
-        <p>
-            A resistor network was used to provide both gain and output
-            offset. The differential signal before amplification was only
-            a few millivolts, requiring a large amplifier gain to produce
-            the desired 0–1 V output range.
-        </p>
-
-        <p>
-            The final feedback network produced a gain of approximately
-            -203.8. An additional voltage-divider network was used to
-            establish the output offset, and a compensation capacitor was
-            included to improve operational-amplifier stability.
-        </p>
+                <p>
+                    The simulated sensor produced a nearly linear output
+                    across the required temperature range. The measured slope
+                    was very close to the ideal value of 0.020 V/°C.
+                </p>
+            </section>
 
 
-        <h2>Results</h2>
+            <section>
+                <h2>Layout and Verification</h2>
 
-        <p>
-            The completed circuit produced the desired linear
-            temperature-to-voltage response over the 0°C to 50°C operating
-            range.
-        </p>
+                <p>
+                    After completing the schematic, the circuit was converted
+                    into a physical layout using Cadence Virtuoso. The layout
+                    included the transistors, resistors, diodes, and
+                    operational amplifier used in the design.
+                </p>
 
-        <div class="results-table">
+                <p>
+                    Design Rule Checking (DRC) and Layout Versus Schematic
+                    (LVS) were used to check the physical implementation and
+                    identify layout errors.
+                </p>
+            </section>
 
-            <table>
 
-                <tr>
-                    <th>Parameter</th>
-                    <th>Target</th>
-                    <th>Result</th>
-                </tr>
+            <section>
+                <h2>Skills and Knowledge Gained</h2>
 
-                <tr>
-                    <td>Temperature Range</td>
-                    <td>0–50°C</td>
-                    <td>0–50°C</td>
-                </tr>
+                <ul>
+                    <li>Analog integrated circuit design</li>
+                    <li>Current mirrors</li>
+                    <li>Differential amplifiers</li>
+                    <li>PTAT temperature sensing</li>
+                    <li>Transistor sizing</li>
+                    <li>Cadence Virtuoso</li>
+                    <li>Integrated circuit layout</li>
+                    <li>DRC and LVS verification</li>
+                </ul>
+            </section>
 
-                <tr>
-                    <td>Output Range</td>
-                    <td>0–1 V</td>
-                    <td>Approximately 0–1 V</td>
-                </tr>
 
-                <tr>
-                    <td>Ideal Slope</td>
-                    <td>0.020 V/°C</td>
-                    <td>0.0199947 V/°C</td>
-                </tr>
+            <section>
+                <h2>Resources Used</h2>
 
-                <tr>
-                    <td>Slope Accuracy</td>
-                    <td>100%</td>
-                    <td>99.99735%</td>
-                </tr>
+                <p>
+                    Course material, Cadence Virtuoso, transistor and diode
+                    models, circuit simulation, and the EE 3300 design
+                    requirements were used throughout the project.
+                </p>
+            </section>
 
-            </table>
+
+            <section>
+                <h2>Supporting Documents</h2>
+
+                <p>
+                    The final project report contains the circuit schematics,
+                    calculations, simulation results, physical layout, and
+                    verification results.
+                </p>
+
+                <a href="temperature-sensor-report.pdf" target="_blank">
+                    View Project Report →
+                </a>
+            </section>
 
         </div>
+    </main>
 
 
-        <h2>Physical Layout & Verification</h2>
-
-        <p>
-            After verifying the schematic operation, the complete circuit
-            was implemented as a physical layout. The layout included
-            PMOS and NMOS devices, diodes, resistors, and the transistor-level
-            differential amplifier. Metal 1, Metal 2, and polysilicon were
-            used to route the circuit.
-        </p>
-
-        <p>
-            Design Rule Checking (DRC) was used to identify physical-layout
-            violations. Layout Versus Schematic (LVS) verification was then
-            used to compare the physical implementation against the original
-            circuit schematic.
-        </p>
-
-        <p>
-            LVS debugging was one of the largest challenges of the project.
-            Device-recognition and resistor-property errors required
-            systematic troubleshooting and modifications to the layout.
-            Resolving these issues provided valuable experience with
-            integrated-circuit verification and debugging.
-        </p>
-
-
-        <h2>Skills & Knowledge Gained</h2>
-
-        <p>
-            This project strengthened my understanding of analog integrated
-            circuit design, including current mirrors, diode behavior,
-            differential amplifiers, MOSFET sizing, biasing, feedback,
-            amplifier stability, and PTAT temperature sensing.
-        </p>
-
-        <p>
-            I also gained significant experience using Cadence Virtuoso for
-            transistor-level simulation and physical IC layout. Debugging DRC
-            and LVS errors helped develop my ability to troubleshoot complex
-            designs and understand the relationship between a circuit
-            schematic and its physical implementation.
-        </p>
-
-
-        <h2>Resources Used</h2>
-
-        <ul>
-            <li>Cadence Virtuoso</li>
-            <li>CMOS transistors</li>
-            <li>Semiconductor diodes</li>
-            <li>Current mirrors</li>
-            <li>Differential operational amplifier</li>
-            <li>Resistor networks</li>
-            <li>DRC and LVS verification tools</li>
-            <li>EE 3300 course design references</li>
-        </ul>
-
-
-        <h2>Supporting Documents</h2>
-
-        <p>
-            The complete project report contains circuit derivations,
-            transistor sizing, schematics, simulation results, physical
-            layouts, and DRC/LVS verification results.
-        </p>
-
-        <!-- Project report button will be added later -->
-
-    </div>
-
-</section>
-
-
-<footer>
-    <p>© 2026 Logan Ward</p>
-</footer>
+    <footer>
+        <div class="container">
+            <p>© 2026 Logan Ward</p>
+        </div>
+    </footer>
 
 </body>
 
