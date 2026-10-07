@@ -268,3 +268,110 @@ footer {
         font-size: 21px;
     }
 }
+
+/* ---------- Individual Project Pages ---------- */
+
+.project-hero {
+    background-color: #1b1b1b;
+    color: white;
+    padding: 70px 0;
+}
+
+.project-hero h1 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.project-hero .project-tools {
+    color: #cccccc !important;
+}
+
+.project-subtitle {
+    font-size: 20px;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+.project-page {
+    background-color: white;
+}
+
+.project-content {
+    max-width: 850px;
+}
+
+.project-content h2 {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    font-size: 27px;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 8px;
+}
+
+.project-content h2:first-child {
+    margin-top: 0;
+}
+
+.project-content p {
+    margin-bottom: 18px;
+}
+
+.project-content ul {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.project-content li {
+    margin-bottom: 7px;
+}
+
+
+/* Results Table */
+
+.results-table {
+    overflow-x: auto;
+    margin: 25px 0 30px 0;
+}
+
+.results-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.results-table th {
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.results-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Project Page Mobile */
+
+@media (max-width: 700px) {
+
+    .project-hero h1 {
+        font-size: 34px;
+    }
+
+}
