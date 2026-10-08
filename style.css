@@ -178,12 +178,12 @@ footer {
 
 /* Profile Photo */
 .profile-photo {
-    width: 220px;
-    height: 220px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     object-position: center 30%;
     float: right;
-    margin: 0 0 20px 25px;
+    margin: 0 0 15px 20px;
     border-radius: 5px;
 }
 
