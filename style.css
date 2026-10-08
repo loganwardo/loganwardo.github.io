@@ -198,3 +198,8 @@ footer {
 section:has(.profile-photo) {
     display: flow-root;
 }
+
+.profile-photo {
+    width: 180px !important;
+    height: 180px !important;
+}
