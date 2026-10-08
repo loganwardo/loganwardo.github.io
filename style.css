@@ -195,3 +195,6 @@ footer {
         margin: 15px auto;
     }
 }
+section:has(.profile-photo) {
+    display: flow-root;
+}
