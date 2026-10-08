@@ -200,6 +200,6 @@ section:has(.profile-photo) {
 }
 
 .profile-photo {
-    width: 180px !important;
-    height: 180px !important;
+    width: 200px !important;
+    height: 200px !important;
 }
